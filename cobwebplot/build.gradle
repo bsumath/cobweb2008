@@ -1,0 +1,14 @@
+group = 'edu.bsu.math.cobweb'
+//version = '2.2.0'
+description = 'Cobweb Plot'
+archivesBaseName = 'cobwebplot'
+
+buildDir = '../build'
+
+repositories { mavenCentral() }
+
+dependencies {
+    compile 'org.jogamp.gluegen:gluegen-rt-main:2.3.1'
+    compile 'org.jogamp.jogl:jogl-all-main:2.3.1'
+    compile 'org.apache.commons:commons-math:2.2'
+}

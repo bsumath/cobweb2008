@@ -1,0 +1,67 @@
+buildscript {
+  repositories {
+    mavenCentral()
+    jcenter()
+    maven { url "https://plugins.gradle.org/m2/" }
+  }
+
+  dependencies {
+    classpath 'de.gliderpilot.gradle.jnlp:gradle-jnlp-plugin:+'
+    classpath "com.cinnober.gradle:semver-git:2.2.2"
+  }
+}
+
+allprojects {
+  ext.snapshotSuffix = "<count>.g<sha>-SNAPSHOT"
+  ext.nextVersion = "patch"
+
+  apply plugin: 'java'
+  apply plugin: 'com.cinnober.gradle.semver-git'
+}
+
+apply plugin: 'maven'
+apply plugin: 'idea'
+apply plugin: 'de.gliderpilot.jnlp'
+
+group = 'edu.bsu.math.cobweb'
+//version = '2.2.0'
+description = 'Cobweb Plot'
+
+jnlp {
+    href 'cobweb2008.jnlp'
+    codebase 'https://bsumath.github.io/cobweb2008/jnlp'
+    mainClassName = 'edu.bsu.math.cobweb.CobwebPlot2008'
+    useVersions = true
+    usePack200 = false
+
+    signJarAddedManifestEntries = [
+            'Codebase'        : project.jnlp.jnlpParams.codebase,
+            'Permissions'     : 'all-permissions',
+            'Application-Name': project.name
+    ]
+
+    withXml {
+        information {
+            title project.description
+            vendor 'Ball State University'
+            homepage href: "https://github.com/bsumath/cobweb2008"
+            description kind: "one-line", 'Java application for visualizing cobweb plots.'
+            'offline-allowed'()
+        }
+        security {
+            'all-permissions'()
+        }
+    }
+}
+
+allprojects {
+   afterEvaluate { project ->
+       def propsFile = rootProject.file('keystore.properties')
+
+       if (propsFile.exists()) {
+           def props = new Properties()
+           props.load(new FileInputStream(propsFile))
+           project.jnlp.signJarParams = props
+       }
+   }
+}
