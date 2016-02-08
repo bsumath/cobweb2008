@@ -1,0 +1,3 @@
+[submodule "mathtoolkit"]
+	path = mathtoolkit
+	url = git@github.com:bsumath/MathToolkit.git
