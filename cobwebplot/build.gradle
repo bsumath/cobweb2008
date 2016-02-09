@@ -5,9 +5,13 @@ archivesBaseName = 'cobwebplot'
 
 buildDir = '../build'
 
-repositories { mavenCentral() }
+repositories {
+    mavenCentral()
+}
 
 dependencies {
+    compile project(':mathtoolkit:mathbeans')
+    compile project(':mathtoolkit:mathtools')
     compile 'org.jogamp.gluegen:gluegen-rt-main:2.3.1'
     compile 'org.jogamp.jogl:jogl-all-main:2.3.1'
     compile 'org.apache.commons:commons-math:2.2'

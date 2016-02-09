@@ -1,1 +1,1 @@
-include ':cobwebplot'
+include ':cobwebplot', ':mathtoolkit:mathbeans', ':mathtoolkit:mathtools'

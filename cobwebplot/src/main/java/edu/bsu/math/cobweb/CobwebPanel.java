@@ -60,11 +60,11 @@ import javax.swing.SwingUtilities;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
-import EDU.emporia.mathbeans.MathGrapher;
-import EDU.emporia.mathbeans.MathGrid;
-import EDU.emporia.mathbeans.SymbolicFunction;
-import EDU.emporia.mathtools.Graphable_error;
-import EDU.emporia.mathtools.PolygonalCurve;
+import edu.emporia.mathbeans.MathGrapher;
+import edu.emporia.mathbeans.MathGrid;
+import edu.emporia.mathbeans.SymbolicFunction;
+import edu.emporia.mathtools.Graphable_error;
+import edu.emporia.mathtools.PolygonalCurve;
 
 /**
  * JPanel for drawing the cobweb plot.

@@ -36,6 +36,20 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/cobwebplot" />
+        <option name="gradleHome" value="c:/java/gradle" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/cobwebplot" />
+            <option value="$PROJECT_DIR$/mathtoolkit" />
+            <option value="$PROJECT_DIR$/mathtoolkit/mathbeans" />
+            <option value="$PROJECT_DIR$/mathtoolkit/mathtools" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
   <component name="GradleUISettings">
@@ -186,6 +200,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/cobweb2008.iml" filepath="$PROJECT_DIR$/cobweb2008.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cobwebplot/cobwebplot.iml" filepath="$PROJECT_DIR$/cobwebplot/cobwebplot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mathtoolkit/mathbeans/mathbeans.iml" filepath="$PROJECT_DIR$/mathtoolkit/mathbeans/mathbeans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mathtoolkit/mathtoolkit.iml" filepath="$PROJECT_DIR$/mathtoolkit/mathtoolkit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mathtoolkit/mathtools/mathtools.iml" filepath="$PROJECT_DIR$/mathtoolkit/mathtools/mathtools.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
@@ -197,6 +215,11 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mathtoolkit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mathtoolkit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mathtoolkit" vcs="Git" />
   </component>
   <component name="libraryTable">
     <library name="Gradle: org.apache.commons:commons-math:2.2">
