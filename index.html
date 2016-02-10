@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Cobweb Plot 2008 by bsumath</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Cobweb Plot 2008</h1>
+        <p class="header">Java application for visualizing cobweb plots</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/bsumath/cobweb2008/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/bsumath/cobweb2008/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/bsumath/cobweb2008">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/bsumath">bsumath</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="cobweb-plot-2008" class="anchor" href="#cobweb-plot-2008" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Cobweb Plot 2008</h1>
+
+<p>This application can be used to visualize a cobweb plot of a function.</p>
+
+<p>It was developed at <a href="http://www.bsu.edu">Ball State University</a> and <a href="http://www.emporia.edu/">Emporia State University</a> 
+by <a href="http://www.bsu.edu/web/rstankewitz/">Richard Stankewitz</a>, <a href="http://www.emporia.edu/math-cs/yanikjoe/">Joe Yanik</a>,  and Ben Dean.</p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>Cobweb Plot 2008 will run on systems with the following:</p>
+
+<ul>
+<li>Java Runtime Environment version 6 or greater (JRE 8 recommended)</li>
+<li>An OpenGL graphics card.</li>
+<li>Windows, Mac OS X, Linux, or Solaris operating systems</li>
+</ul>
+
+<h2>
+<a id="installation-and-use" class="anchor" href="#installation-and-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation and Use</h2>
+
+<p>Cobweb Plot 2008 can be launched as a Java Web Start Application:</p>
+
+<ul>
+<li><a href="https://bsumath.github.io/cobweb2008/jnlp/cobweb2008.jnlp">Cobweb Plot 2008 - v1.1.0 (stable)</a></li>
+</ul>
+
+<h2>
+<a id="development" class="anchor" href="#development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development</h2>
+
+<p>Development requirements:</p>
+
+<ul>
+<li>Java SE Development Kit 8 or higher</li>
+<li>Groovy 2.4.4 or higher</li>
+<li>Gradle 2.6 or higher</li>
+<li>IntelliJ IDEA (recommended IDE)</li>
+</ul>
+
+<h3>
+<a id="build" class="anchor" href="#build" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build</h3>
+
+<p>To build Cobweb Plot 2008 run:</p>
+
+<pre><code>gradle build
+</code></pre>
+
+<h3>
+<a id="release" class="anchor" href="#release" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release</h3>
+
+<p>To release a new version of Cobweb Plot 2008, in addition to building the project you need to sign the jar files with a certificate. Rich Stankewitz keeps the BSU Math department's signing key.</p>
+
+<p>Create a file in this repo named <code>keystore.properties</code> with the following:</p>
+
+<pre><code>storepass=the key store password goes here
+storetype=pkcs12
+keystore=D:\\path\\to\\the\\cert.p12
+alias=the correct certificate alias
+tsaurl=http://the.real.timestamp.authority.example.com
+</code></pre>
+
+<p>Rich Stankewitz has the correct values for the <code>keystore.properties</code> file. Once that file is created you can sign the jars and generate the jnlp content with:</p>
+
+<pre><code>gradle createWebstart
+</code></pre>
+
+<p>Then the <code>build/jnlp</code> directory will contain</p>
+
+<ul>
+<li>
+<code>cobweb2008.jnlp</code> - the file to launch Cobweb Plot 2008 via Java Web Start</li>
+<li>
+<code>lib/*.jar</code> -  the signed jar files for Cobweb Plot 2008 and its dependencies</li>
+</ul>
+
+<p>These files should then be committed on the <a href="https://github.com/bsumath/cobweb2008/tree/gh-pages">bsumath/cobweb2008@gh-pages</a> branch.</p>
+
+<h2>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributors</h2>
+
+<ul>
+<li><a href="http://www.bsu.edu/web/rstankewitz/">Richard Stankewitz</a></li>
+<li><a href="http://www.emporia.edu/math-cs/yanikjoe/">Joe Yanik</a></li>
+<li>Ben Dean</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>Copyright © 2008-2016 Ball State University</p>
+
+<p>Copyright © Emporia State University</p>
+
+<p>Cobweb Plot 2008 is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+
+<p>Cobweb Plot 2008 is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License
+along with Cobweb Plot 2008.  If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
