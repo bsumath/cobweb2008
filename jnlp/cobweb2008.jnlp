@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jnlp spec='7.0' href='cobweb2008.jnlp' codebase='https://bsumath.github.io/cobweb2008/jnlp'>
+  <information>
+    <title>Cobweb Plot</title>
+    <vendor>Ball State University</vendor>
+    <homepage href='https://github.com/bsumath/cobweb2008' />
+    <description kind='one-line'>Java application for visualizing cobweb plots.</description>
+    <offline-allowed />
+  </information>
+  <security>
+    <all-permissions />
+  </security>
+  <resources>
+    <j2se version='1.8' />
+    <jar href='lib/cobwebplot.jar' version='1.1.0' main='true' />
+    <jar href='lib/mathbeans__V2.0.4-1.gb195f50-SNAPSHOT.jar' />
+    <jar href='lib/mathtools__V2.0.4-1.gb195f50-SNAPSHOT.jar' />
+    <jar href='lib/gluegen-rt-main.jar' version='2.3.1' />
+    <jar href='lib/jogl-all-main.jar' version='2.3.1' />
+    <jar href='lib/commons-math.jar' version='2.2' />
+    <jar href='lib/gluegen-rt.jar' version='2.3.1' />
+    <jar href='lib/gluegen-rt-natives-android-aarch64.jar' version='2.3.1' />
+    <jar href='lib/gluegen-rt-natives-android-armv6.jar' version='2.3.1' />
+    <jar href='lib/gluegen-rt-natives-linux-amd64.jar' version='2.3.1' />
+    <jar href='lib/gluegen-rt-natives-linux-armv6.jar' version='2.3.1' />
+    <jar href='lib/gluegen-rt-natives-linux-armv6hf.jar' version='2.3.1' />
+    <jar href='lib/gluegen-rt-natives-linux-i586.jar' version='2.3.1' />
+    <jar href='lib/gluegen-rt-natives-macosx-universal.jar' version='2.3.1' />
+    <jar href='lib/gluegen-rt-natives-solaris-amd64.jar' version='2.3.1' />
+    <jar href='lib/gluegen-rt-natives-solaris-i586.jar' version='2.3.1' />
+    <jar href='lib/gluegen-rt-natives-windows-amd64.jar' version='2.3.1' />
+    <jar href='lib/gluegen-rt-natives-windows-i586.jar' version='2.3.1' />
+    <jar href='lib/jogl-all.jar' version='2.3.1' />
+    <jar href='lib/jogl-all-natives-android-aarch64.jar' version='2.3.1' />
+    <jar href='lib/jogl-all-natives-android-armv6.jar' version='2.3.1' />
+    <jar href='lib/jogl-all-natives-linux-amd64.jar' version='2.3.1' />
+    <jar href='lib/jogl-all-natives-linux-armv6.jar' version='2.3.1' />
+    <jar href='lib/jogl-all-natives-linux-armv6hf.jar' version='2.3.1' />
+    <jar href='lib/jogl-all-natives-linux-i586.jar' version='2.3.1' />
+    <jar href='lib/jogl-all-natives-macosx-universal.jar' version='2.3.1' />
+    <jar href='lib/jogl-all-natives-solaris-amd64.jar' version='2.3.1' />
+    <jar href='lib/jogl-all-natives-solaris-i586.jar' version='2.3.1' />
+    <jar href='lib/jogl-all-natives-windows-amd64.jar' version='2.3.1' />
+    <jar href='lib/jogl-all-natives-windows-i586.jar' version='2.3.1' />
+    <property name='jnlp.versionEnabled' value='true' />
+  </resources>
+  <application-desc main-class='edu.bsu.math.cobweb.CobwebPlot2008' />
+</jnlp>

@@ -1,0 +1,11 @@
+# Site settings
+title: Cobweb Plot 2008
+description: An application which can be used to visualize a cobweb plot of a function.
+baseurl: "/cobweb2008"
+url: "https://bsumath.github.io"
+github_username:  bsumath
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+exclude: ['vendor']
