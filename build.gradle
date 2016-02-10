@@ -1,31 +1,39 @@
 buildscript {
-  repositories {
-    mavenCentral()
-    jcenter()
-    maven { url "https://plugins.gradle.org/m2/" }
-  }
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://jitpack.io" }
+    }
 
-  dependencies {
-    classpath 'de.gliderpilot.gradle.jnlp:gradle-jnlp-plugin:+'
-    classpath "com.cinnober.gradle:semver-git:2.2.2"
-  }
+    dependencies {
+        classpath 'de.gliderpilot.gradle.jnlp:gradle-jnlp-plugin:+'
+        // classpath "com.cinnober.gradle:semver-git:2.2.2."
+        classpath "com.github.zombiedev:semver-git:98f7bb63b0"
+    }
 }
 
-allprojects {
-  ext.snapshotSuffix = "<count>.g<sha>-SNAPSHOT"
-  ext.nextVersion = "patch"
+subprojects {
+    ext.snapshotSuffix = "<count>.g<sha>-SNAPSHOT"
+    ext.nextVersion = "patch"
 
-  apply plugin: 'java'
-  apply plugin: 'com.cinnober.gradle.semver-git'
+    apply plugin: 'java'
+    apply plugin: 'com.cinnober.gradle.semver-git'
 }
 
-apply plugin: 'maven'
 apply plugin: 'idea'
 apply plugin: 'de.gliderpilot.jnlp'
 
 group = 'edu.bsu.math.cobweb'
-//version = '2.2.0'
 description = 'Cobweb Plot'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    jnlp project(':cobwebplot')
+}
 
 jnlp {
     href 'cobweb2008.jnlp'
@@ -55,13 +63,13 @@ jnlp {
 }
 
 allprojects {
-   afterEvaluate { project ->
-       def propsFile = rootProject.file('keystore.properties')
+    afterEvaluate { project ->
+        def propsFile = rootProject.file('keystore.properties')
 
-       if (propsFile.exists()) {
-           def props = new Properties()
-           props.load(new FileInputStream(propsFile))
-           project.jnlp.signJarParams = props
-       }
-   }
+        if (propsFile.exists()) {
+            def props = new Properties()
+            props.load(new FileInputStream(propsFile))
+            project.jnlp.signJarParams = props
+        }
+    }
 }

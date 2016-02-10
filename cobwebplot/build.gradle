@@ -1,7 +1,5 @@
 group = 'edu.bsu.math.cobweb'
-//version = '2.2.0'
 description = 'Cobweb Plot'
-archivesBaseName = 'cobwebplot'
 
 buildDir = '../build'
 
