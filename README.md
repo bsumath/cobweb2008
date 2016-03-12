@@ -21,6 +21,8 @@ Cobweb Plot 2008 can be launched as a Java Web Start Application:
 
 * [Cobweb Plot 2008 - v1.1.0 (stable)](https://bsumath.github.io/cobweb2008/jnlp/cobweb2008.jnlp)
 
+For information about using Cobweb Plot 2008 offline, please refer to the
+[Installation instructions](https://github.com/bsumath/cobweb2008/wiki/Installation) on the wiki.
 
 Development
 -----------
